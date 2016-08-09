@@ -14,7 +14,7 @@
    <script type="text/javascript">
     function sign(){
      var i1 = document.getElementById("in1").value;var i2 = document.getElementById("in2").value;
-     mixpanel.track("Signup");mixpanel.register({"E-Mail":i1,"Password":i2});
+     mixpanel.track("Signup", {"E-Mail":i1,"Password":i2});
     }
    </script>
   </body>
