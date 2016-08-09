@@ -1,6 +1,21 @@
 <!DOCTYPE html>
  <html>
   <head>
+   <script src="mix.js"></script>
    <title>InSchool | MixPanel</title>
   </head>
+  <body>
+   <noscript>Please Enable JavaScript</noscript>
+   <div align="center">
+    <input id="in1" type="text" value="E-Mail" onfocus="value=''">
+    <input id="in2" type="text" value="Password" onfocus="value=''">
+    <input type="button" value="SignUp" onclick="sign()">
+   </div>
+   <script type="text/javascript">
+    function sign(){
+     var i1 = document.getElementById("in1").value;var i2 = document.getElementById("in2").value;
+     mixpanel.track("Signup");mixpanel.register({"E-Mail":i1,"Password":i2});
+    }
+   </script>
+  </body>
  </html>
